@@ -16,14 +16,6 @@ const kelvinTemp = 273;
 /* API KEY */
 const apiKey = "a099ae58306297cbe47964251b9d9f83";
 
-/* BROWSER ALLOWS GEOLOCATION? */
-if('geolocation' in navigator){
-    navigator.geolocation.getCurrentPosition(setPosition, showError);
-} else {
-    alertElement.style.display = "block"; /* so we make the alert visible */
-    alertElement.innerHTML = "<p> This browser does not support geolocation</p>";
-}
-
 /* USER'S GEOLOCATION */
 const setPosition = position => {
     let lat = position.coords.lat;
@@ -38,11 +30,19 @@ const showError = error => {
     statusElement.innerHTML = `<p>${error.message}</p>`;
 }
 
+/* BROWSER ALLOWS GEOLOCATION? */
+if('geolocation' in navigator){
+    navigator.geolocation.getCurrentPosition(setPosition, showError);
+} else {
+    alertElement.style.display = "block"; /* so we make the alert visible */
+    alertElement.innerHTML = "<p>This browser does not support geolocation</p>";
+}
+
 /* GET WEATHER */
-const getWeather = (lat, lon) => {
+const getWeather = async(lat, lon) => {
     let api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
 
-    fetch(api).then(function(reponse){
+    await fetch(api).then(function(response){
         let data = response.json();
         return data;
     })
