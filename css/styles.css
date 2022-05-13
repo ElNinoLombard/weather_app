@@ -13,7 +13,7 @@ body {
     width: 350px;
     border-radius: 10px;
     text-align: center;
-    padding: 20px;
+    padding-bottom: 60px;
 }
 
 .access-status {
@@ -26,7 +26,7 @@ body {
     padding: 10px 0;
     margin: 0;
     color: #c53838;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .app-header {
@@ -39,7 +39,7 @@ body {
     text-align: center;
     padding: 10px;
     font-size: 1.5em;
-    color: #292727;
+    color: #464444;
     margin: 0 auto;
 }
 
@@ -52,4 +52,47 @@ body {
 .weather-icon {
     width: 350px;
     height: 128px;
+}
+
+.weather-icon img {
+    display: block;
+    margin: 0 auto;
+}
+
+.temperature {
+    width: 350px;
+    height: 90px;
+}
+
+.temperature span {
+    color: #464444;
+    font-size: 0.8em;
+}
+
+.temperature p{
+    text-align: center;
+    padding: 10px;
+    margin: 25px;
+    color: #464444;
+    font-size: 3em;
+}
+
+.temperature p:hover {
+    cursor: pointer;
+}
+
+.temp-description p{
+    text-align: center;
+    margin: 0;
+    padding: 7px;
+    color: #464444;
+    font-size: 1.2em;
+}
+
+.location p {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    color: #464444;
+    font-size: 0.8em;
 }
