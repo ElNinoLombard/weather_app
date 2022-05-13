@@ -1,0 +1,55 @@
+* {
+    font-family: 'Titillium Web', sans-serif;
+    background: #f5f1f1;
+}
+
+body {
+    background: #464444;
+}
+
+.container {
+    margin: 0 auto;
+    display: block;
+    width: 350px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+.access-status {
+    background-color: #e41425;
+    display: none; /* so we can hide and show the message without deleting it and recreating it */
+}
+
+.access-status p {
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+    color: #c53838;
+    font-size: 1.5em;
+}
+
+.app-header {
+    width: 350px;
+    height: 50px;
+    border-radius: 10px 10px 0 0;
+}
+
+.app-header p {
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5em;
+    color: #292727;
+    margin: 0 auto;
+}
+
+.weather-container {
+    width: 350px;
+    height: 300px;
+    background-color: white;
+}
+
+.weather-icon {
+    width: 350px;
+    height: 128px;
+}

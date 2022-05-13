@@ -34,8 +34,8 @@ const showError = error => {
 if('geolocation' in navigator){
     navigator.geolocation.getCurrentPosition(setPosition, showError);
 } else {
-    alertElement.style.display = "block"; /* so we make the alert visible */
-    alertElement.innerHTML = "<p>This browser does not support geolocation</p>";
+    statusElement.style.display = "block"; /* so we make the alert visible */
+    statusElement.innerHTML = "<p>This browser does not support geolocation</p>";
 }
 
 /* GET WEATHER */
